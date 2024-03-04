@@ -1,2 +1,2 @@
 # Blog App witn Next.js & React.js 
- Next.js, Mongo bd.
+ Next.js, Mongo db.
