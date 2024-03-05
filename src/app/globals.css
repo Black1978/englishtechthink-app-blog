@@ -237,6 +237,7 @@ a {
     min-height: 100svh;
     background-color: var(--bg);
     color: var(--textColor);
+    /* border: 5px red solid; */
 }
 .wrapper {
     max-width: 1536px;
@@ -244,6 +245,7 @@ a {
     margin-right: auto;
     padding-left: 80px;
     padding-right: 80px;
+    /* border: 5px green solid; */
 }
 
 @media screen and (max-width: 1536px) {
