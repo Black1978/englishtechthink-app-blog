@@ -21,6 +21,7 @@
     flex: 1 0 33.333%;
     height: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 
