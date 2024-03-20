@@ -1,23 +1,26 @@
-.textTitle {
-    background-color: var(--softBg);
-    padding: 50px;
-    font-size: 64px;
-    border: none;
-}
-.textTitle::placeholder {
-    color: #b3b3b1;
-}
-.editor {
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .select{
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    margin-left: 50px;
+    width: max-content;
+  }
+  
+  .editor {
     display: flex;
     gap: 20px;
     height: 700px;
     position: relative;
-}
-.textArea {
-    width: 100%;
-}
-.button,
-.addButton {
+  }
+  
+  .button,
+  .addButton {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -27,11 +30,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-.addButton {
+  }
+  
+  .addButton {
     border-color: #1a8917;
-}
-.add {
+  }
+  
+  .add {
     display: flex;
     gap: 20px;
     background-color: var(--bg);
@@ -39,14 +44,33 @@
     z-index: 999;
     width: 100%;
     left: 50px;
-}
-.publish {
+  }
+  
+  .input{
+    padding: 50px;
+    font-size: 64px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--textColor);
+  }
+  
+  .input::placeholder{
+    color: #b3b3b1;
+  }
+  
+  .textArea {
+    width: 100%;
+  }
+  
+  .publish{
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     padding: 10px 20px;
     border: none;
-    color: white;
     background-color: #1a8917;
+    color: white;
     cursor: pointer;
-}
+    border-radius: 20px;
+  }

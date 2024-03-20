@@ -223,6 +223,7 @@ img {
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
+    --textColorAdd: #626262;
 }
 a {
     color: inherit;
@@ -232,6 +233,7 @@ a {
     --textColor: #ddd;
     --softBg: #1f273a;
     --softTextColor: #a6a6a6;
+    --textColorAdd: #fdca3f;
 }
 .container {
     min-height: 100svh;

@@ -12,11 +12,10 @@ const Featured = () => {
                 </div>
                 <div className={styles.textContainer}>
                     <h2 className={styles.postTitle}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, modi!
+                        Взрослый человек, его способности познавать окружающий мир
                     </h2>
                     <p className={styles.postDesc}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit obcaecati
-                        porro iste dolor velit nostrum libero nulla quibusdam consectetur harum?
+                        Уже сформированные приемы мышления взрослого человека, диктуют особый подход к изучению другого языка.
                     </p>
                     <button className={styles.button}>Read More</button>
                 </div>

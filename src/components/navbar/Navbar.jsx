@@ -9,12 +9,20 @@ const Navbar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.social}>
-                <Image src='/facebook.png' alt='facebook' width={24} height={24} />
-                <Image src='/instagram.png' alt='instagram' width={24} height={24} />
-                <Image src='/tiktok.png' alt='tiktok' width={24} height={24} />
-                <Image src='/youtube.png' alt='youtube' width={24} height={24} />
+                <Link href='http://facebook.com'>
+                    <Image src='/facebook.png' alt='facebook' width={30} height={30} />
+                </Link>
+                <Link href='http://instagram.com'>
+                    <Image src='/instagram.png' alt='instagram' width={30} height={30} />
+                </Link>
+                <Link href='http://tiktok.com'>
+                    <Image src='/tiktok.png' alt='tiktok' width={30} height={30} />
+                </Link>
+                <Link href='http://youtube.com'>
+                    <Image src='/youtube.png' alt='youtube' width={30} height={30} />
+                </Link>
             </div>
-            <div className={styles.logo}>
+            <Link href='/' className={styles.logo}>
                 <Image
                     src='/english.svg'
                     alt='englishteachthink.com'
@@ -22,12 +30,18 @@ const Navbar = () => {
                     fill
                     priority={true}
                 />
-            </div>
+            </Link>
             <div className={styles.links}>
                 <ThemeToggle />
-                <Link href='/' className={styles.link}>Home</Link>
-                <Link href='/contact' className={styles.link}>Contact</Link>
-                <Link href='/about' className={styles.link}>About</Link>
+                <Link href='/' className={styles.link}>
+                    Home
+                </Link>
+                <Link href='/contact' className={styles.link}>
+                    Contact
+                </Link>
+                <Link href='/about' className={styles.link}>
+                    About
+                </Link>
                 <AuthLinks />
             </div>
         </div>

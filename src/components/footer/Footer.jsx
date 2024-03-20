@@ -15,25 +15,28 @@ const Footer = () => {
                         priority={true}
                     />
                 </div>
-                <p className={styles.desc}>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nobis qui
-                    officiis vitae saepe tempore, officia molestias vero quis voluptates libero
-                    labore consectetur praesentium possimus dignissimos ipsum dolor impedit fuga.
-                </p>
+                <p className={styles.desc}>Методика изучения английского языка.</p>
                 <div className={styles.icons}>
-                    <Image src='/facebook.png' alt='facebook' width={18} height={18} />
-                    <Image src='/instagram.png' alt='instagram' width={18} height={18} />
-                    <Image src='/tiktok.png' alt='tiktok' width={18} height={18} />
-                    <Image src='/youtube.png' alt='youtube' width={18} height={18} />
+                    <Link href='https://facebook.com'>
+                        <Image src='/facebook.png' alt='facebook' width={24} height={24} />
+                    </Link>
+                    <Link href='https://instagram.com'>
+                        <Image src='/instagram.png' alt='instagram' width={24} height={24} />
+                    </Link>
+                    <Link href='https://tiktok.com'>
+                        <Image src='/tiktok.png' alt='tiktok' width={24} height={24} />
+                    </Link>
+                    <Link href='https://youtube.com'>
+                        <Image src='/youtube.png' alt='youtube' width={24} height={24} />
+                    </Link>
                 </div>
             </div>
             <div className={styles.links}>
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Ссылки</span>
                     <Link href='/'>Home</Link>
-                    <Link href='/'>Блог</Link>
-                    <Link href='/'>О нас</Link>
-                    <Link href='/'>Контакт</Link>
+                    <Link href='/'>Contact</Link>
+                    <Link href='/'>About us</Link>
                 </div>
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Tags</span>
@@ -44,10 +47,10 @@ const Footer = () => {
                 </div>
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Social</span>
-                    <Link href='/'>Facebook</Link>
-                    <Link href='/'>Instagram</Link>
-                    <Link href='/'>Tiktok</Link>
-                    <Link href='/'>Youtube</Link>
+                    <Link href='https://facebook.com'>Facebook</Link>
+                    <Link href='https://instagram.com'>Instagram</Link>
+                    <Link href='https://tiktok.com'>Tiktok</Link>
+                    <Link href='https://youtube.com'>Youtube</Link>
                 </div>
             </div>
         </div>

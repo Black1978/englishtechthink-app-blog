@@ -35,11 +35,13 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
 }
 
 model User {
   id            String    @id @default(cuid()) @map("_id")
-  name          String?
+  name          String?    
+  isAdmin       Boolean      @default(false)
   email         String    @unique
   emailVerified DateTime?
   image         String?
@@ -47,6 +49,7 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
+
 }
 
 model VerificationToken {
@@ -89,3 +92,4 @@ model Comment {
   postSlug  String
   post      Post     @relation(fields: [postSlug], references: [slug])
 }
+
