@@ -41,7 +41,7 @@ model Session {
 model User {
   id            String    @id @default(cuid()) @map("_id")
   name          String?    
-  isAdmin       Boolean      @default(false)
+  isAdmin       Boolean   @default(false)
   email         String    @unique
   emailVerified DateTime?
   image         String?

@@ -7,7 +7,7 @@ const Card = ({ key, item }) => {
     <div className={styles.container} key={key}>
       {item.img && (
         <div className={styles.imageContainer}>
-          <Image src={item.img} alt="" fill className={styles.image} />
+          <Image src={item.img} alt="" fill  sizes='(max-width: 500px) 0vw, 50vw' className={styles.image} />
         </div>
       )}
       <div className={styles.textContainer}>

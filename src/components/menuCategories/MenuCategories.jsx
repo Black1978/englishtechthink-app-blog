@@ -4,23 +4,23 @@ import styles from './menuCategories.module.css'
 const MenuCategories = () => {
   return (
     <div className={styles.categoryList}>
-                <Link href='/blog?cat=style' className={`${styles.categoryItem} ${styles.style}`}>
-                    Style
+                <Link href='/blog?cat=understanding' className={`${styles.categoryItem} ${styles.understanding}`}>
+                understanding
                 </Link>
-                <Link href='/blog?cat=fashion' className={`${styles.categoryItem} ${styles.fashion}`}>
-                    Fashion
+                <Link href='/blog?cat=reading' className={`${styles.categoryItem} ${styles.reading}`}>
+                reading
                 </Link>
-                <Link href='/blog?cat=food' className={`${styles.categoryItem} ${styles.food}`}>
-                    Food
+                <Link href='/blog?cat=listening' className={`${styles.categoryItem} ${styles.listening}`}>
+                listening
                 </Link>
-                <Link href='/blog?cat=travel' className={`${styles.categoryItem} ${styles.travel}`}>
-                    Travel
+                <Link href='/blog?cat=spelling' className={`${styles.categoryItem} ${styles.spelling}`}>
+                spelling
                 </Link>
-                <Link href='/blog?cat=culture' className={`${styles.categoryItem} ${styles.culture}`}>
-                    Culture
+                <Link href='/blog?cat=speaking' className={`${styles.categoryItem} ${styles.speaking}`}>
+                speaking
                 </Link>
-                <Link href='/blog?cat=coding' className={`${styles.categoryItem} ${styles.coding}`}>
-                    Coding
+                <Link href='/blog?cat=etc' className={`${styles.categoryItem} ${styles.etc}`}>
+                etc
                 </Link>
             </div>
   )

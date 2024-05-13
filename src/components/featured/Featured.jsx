@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './featured.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Featured = () => {
     return (
@@ -8,16 +9,26 @@ const Featured = () => {
             <h1 className={styles.title}>Научись думать на английском языке</h1>
             <div className={styles.post}>
                 <div className={styles.imgContainer}>
-                    <Image src='/p1.jpeg' alt='' fill className={styles.image}/>
+                    <Image
+                        src='/london-panorama.jpg'
+                        alt=''
+                        fill
+                        className={styles.image}
+                        sizes='(max-width: 1024px) 0vw, (max-width: 1280px) 50vw, 50vw'
+                        priority
+                    />
                 </div>
                 <div className={styles.textContainer}>
-                    <h2 className={styles.postTitle}>
-                        Взрослый человек, его способности познавать окружающий мир
-                    </h2>
+                    <h2 className={styles.postTitle}>Не «переводить как…», а «понимать»</h2>
                     <p className={styles.postDesc}>
-                        Уже сформированные приемы мышления взрослого человека, диктуют особый подход к изучению другого языка.
+                        Английский язык изучается не как «аналог» русского языка, а как «устройство»
+                        для создания картинок в воображении слушающего тебя человека. Такой подход
+                        (смещение смысла такого явления как «иностранный язык») порождает устранение
+                        «паразитирования» изучаемого английского языка на русском языке.
                     </p>
-                    <button className={styles.button}>Read More</button>
+                    <Link href={`/posts/ne-perevodit-kak-a-ponimat`} className={styles.link}>
+                        <button className={styles.button}>Read More</button>{' '}
+                    </Link>
                 </div>
             </div>
         </div>

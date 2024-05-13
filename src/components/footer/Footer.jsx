@@ -6,15 +6,17 @@ const Footer = () => {
     return (
         <div className={styles.container}>
             <div className={styles.info}>
-                <div className={styles.logo}>
-                    <Image
-                        src='/english.svg'
-                        alt='englishteachthink.com'
-                        className={styles.logoImg}
-                        fill
-                        priority={true}
-                    />
-                </div>
+                <Link href='/'>
+                    <div className={styles.logo}>
+                        <Image
+                            src='/english.svg'
+                            alt='englishteachthink.com'
+                            className={styles.logoImg}
+                            fill
+                            priority={true}
+                        />
+                    </div>
+                </Link>
                 <p className={styles.desc}>Методика изучения английского языка.</p>
                 <div className={styles.icons}>
                     <Link href='https://facebook.com'>
@@ -35,15 +37,15 @@ const Footer = () => {
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Ссылки</span>
                     <Link href='/'>Home</Link>
-                    <Link href='/'>Contact</Link>
-                    <Link href='/'>About us</Link>
+                    <Link href='/contact'>Contact</Link>
+                    <Link href='/about'>About us</Link>
                 </div>
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Tags</span>
-                    <Link href='/'>Style</Link>
-                    <Link href='/'>Fashion</Link>
-                    <Link href='/'>Coding</Link>
-                    <Link href='/'>Travel</Link>
+                    <Link href='/blog?cat=reading'>Reading</Link>
+                    <Link href='/blog?cat=speaking'>Speaking</Link>
+                    <Link href='/blog?cat=understanding'>Understanding</Link>
+                    <Link href='/blog?cat=listening'>Listening</Link>
                 </div>
                 <div className={styles.list}>
                     <span className={styles.listTitle}>Social</span>

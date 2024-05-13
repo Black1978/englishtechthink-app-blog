@@ -1,2 +1,2 @@
-# Blog App witn Next.js & React.js 
- Next.js, Mongo db.
+# Blog App witn Next13.js & React.js 
+ Next13.js, Mongo db.

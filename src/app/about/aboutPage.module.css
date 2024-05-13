@@ -11,7 +11,15 @@
     flex-direction: column;
     gap: 50px;
 }
-
+.content {
+    line-height: 1.5;
+}
+.contentSummary {
+    border: 1px solid var(--borderSummary);
+    line-height: 1.75;
+    font-style: italic;
+    padding: 20px;
+}
 @media screen and (max-width: 768px) {
     .wrapper {
         padding: 50px 100px;

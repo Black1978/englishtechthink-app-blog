@@ -4,9 +4,11 @@ import styles from './loginPage.module.css'
 import { useRouter } from 'next/navigation'
 
 const LoginPage = () => {
+    
     const { data, status } = useSession()
-    console.log({ data }, status)
+
     const router = useRouter()
+
     if (status === 'loading') {
         return <div className={styles.loading}>Loading ...</div>
     }
@@ -24,9 +26,9 @@ const LoginPage = () => {
                 <div className={styles.socialButton} onClick={() => signIn('github')}>
                     Sign in with GitHub
                 </div>
-                <div className={styles.socialButton} onClick={() => signIn('facebook')}>
+                {/* <div className={styles.socialButton} onClick={() => signIn('facebook')}>
                     Sign in with Facebook
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -43,6 +43,9 @@
     font-size: 20px;
     font-weight: 500;
 }
+.date {
+    color: gray;
+}
 .content {
     display: flex;
     gap: 50px;
@@ -51,11 +54,8 @@
     flex: 5;
     margin-top: 60px;
 }
-.description p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
+
+
 @media screen and (max-width: 1536px) {
     .title {
         font-size: 54px;

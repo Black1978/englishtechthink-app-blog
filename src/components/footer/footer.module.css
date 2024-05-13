@@ -50,6 +50,9 @@
     .links {
         gap: 50px;
     }
+    .logo {
+        width: 300px;
+    }
 }
 @media screen and (max-width: 768px) {
     .container {
@@ -64,8 +67,5 @@
 @media screen and (max-width: 640px) {
     .links {
         font-size: 14px;
-    }
-    .logo {
-        width: 300px;
     }
 }

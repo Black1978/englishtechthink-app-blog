@@ -4,6 +4,7 @@ import Pagination from "../pagination/Pagination";
 import Card from "../card/Card";
 
 const getData = async (page, cat) => {
+  
   const res = await fetch(
     `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
     {
@@ -34,7 +35,7 @@ const CardList = async ({ page, cat }) => {
           <Card item={item} key={item._id} />
         ))}
       </div>
-      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
+      <Pagination page={page} cat={cat} hasPrev={hasPrev} hasNext={hasNext} />
     </div>
   );
 };

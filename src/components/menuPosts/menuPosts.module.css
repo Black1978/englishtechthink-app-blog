@@ -11,7 +11,7 @@
     gap: 20px;
 }
 .imageContainer {
-    flex: 1;
+    flex: 2;
     aspect-ratio: 1/1;
     position: relative;
 }
@@ -21,10 +21,10 @@
     object-fit: cover;
 }
 .textContainer {
-    flex: 4;
+    flex: 5;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 .postTitle {
     font-size: 18px;
@@ -36,21 +36,26 @@
     color: gray;
 }
 .category {
-    padding: 3px 8px;
+    padding: 5px 8px;
     border-radius: 10px;
     font-size: 12px;
-    color: white;
     width: max-content;
 }
-.category.travel {
+.reading {
     background-color: #ff7857;
 }
-.culture {
+.understanding {
     background-color: #ffb14f;
 }
-.food {
+.listening {
     background-color: #7fb881;
 }
-.fashion {
+.spelling {
+    background-color: #da85c731;
+}
+.etc {
     background-color: #ff7887;
+}
+.category.speaking {
+    background-color: #57c4ff31;
 }

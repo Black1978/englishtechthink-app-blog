@@ -11,21 +11,21 @@
     font-size: 14px;
 }
 
-.categoryItem.style {
-    background-color: #57c4ff31;
+.categoryItem.reading {
+    background-color: #ff7857;
 }
-.categoryItem.fashion {
+.categoryItem.understanding {
+    background-color: #ffb14f;
+}
+.categoryItem.listening {
+    background-color: #7fb881;
+}
+.categoryItem.spelling {
     background-color: #da85c731;
 }
-.categoryItem.food {
-    background-color: #7fb88133;
+.categoryItem.etc {
+    background-color: #ff7887;
 }
-.categoryItem.travel {
-    background-color: #ff795736;
-}
-.categoryItem.culture {
-    background-color: #ffb04f45;
-}
-.categoryItem.coding {
-    background-color: #5e4fff31;
+.categoryItem.speaking {
+    background-color: #57c4ff31;
 }

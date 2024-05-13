@@ -64,6 +64,53 @@ const WritePage = () => {
     if (status === 'unauthenticated') {
         router.push('/')
     }
+    function rus_to_latin(str) {
+        var ru = {
+                а: 'a',
+                б: 'b',
+                в: 'v',
+                г: 'g',
+                д: 'd',
+                е: 'e',
+                ё: 'e',
+                ж: 'j',
+                з: 'z',
+                и: 'i',
+                к: 'k',
+                л: 'l',
+                м: 'm',
+                н: 'n',
+                о: 'o',
+                п: 'p',
+                р: 'r',
+                с: 's',
+                т: 't',
+                у: 'u',
+                ф: 'f',
+                х: 'h',
+                ц: 'c',
+                ч: 'ch',
+                ш: 'sh',
+                щ: 'shch',
+                ы: 'y',
+                э: 'e',
+                ю: 'u',
+                я: 'ya',
+            },
+            n_str = []
+
+        str = str.replace(/[ъь]+/g, '').replace(/й/g, 'i')
+
+        for (var i = 0; i < str.length; ++i) {
+            n_str.push(
+                ru[str[i]] ||
+                    (ru[str[i].toLowerCase()] == undefined && str[i]) ||
+                    ru[str[i].toLowerCase()].toUpperCase()
+            )
+        }
+
+        return n_str.join('')
+    }
 
     const slugify = (str) =>
         str
@@ -80,8 +127,8 @@ const WritePage = () => {
                 title,
                 desc: value,
                 img: media,
-                slug: slugify(title),
-                catSlug: catSlug || 'style', //If not selected, choose the general category
+                slug: slugify(rus_to_latin(title)),
+                catSlug: catSlug || 'understanding', //If not selected, choose the general category
             }),
         })
 
@@ -100,12 +147,12 @@ const WritePage = () => {
                 onChange={(e) => setTitle(e.target.value)}
             />
             <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
-                <option value='style'>style</option>
-                <option value='fashion'>fashion</option>
-                <option value='food'>food</option>
-                <option value='culture'>culture</option>
-                <option value='travel'>travel</option>
-                <option value='coding'>coding</option>
+                <option value='understanding'>understanding</option>
+                <option value='reading'>reading</option>
+                <option value='listening'>listening</option>
+                <option value='spelling'>spelling</option>
+                <option value='speaking'>speaking</option>
+                <option value='etc'>etc</option>
             </select>
             <div className={styles.editor}>
                 <button className={styles.button} onClick={() => setOpen(!open)}>
