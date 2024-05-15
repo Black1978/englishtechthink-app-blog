@@ -3,7 +3,7 @@ import styles from './aboutPage.module.css'
 const AboutPage = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.wrapper}>
+            <article className={styles.wrapper}>
                 <p className={styles.content}>
                     Английский язык изучается не как «английский язык», а как «то как работает
                     швейная машинка».
@@ -58,7 +58,7 @@ const AboutPage = () => {
                     Контент будет полезен тому, кто некоторое время уже учит английский язык, и
                     имеет затруднения по части понимания его грамматики.
                 </p>
-            </div>
+            </article>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import AuthProvider from '@/providers/AuthProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
+    metadataBase: new URL(process.env.BASE_URL),
     title: 'englishteachthink.com',
     description: 'Научиться думать на английском языке.',
 }
@@ -16,6 +17,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
+            <head>
+                {process.env.NODE_ENV === 'production' && (
+                    <meta
+                        name='google-site-verification'
+                        content='ITtrSTd-d2mg1NipO3xdI7HdqQkSwFXkwc0qxKCKQ_M'
+                    />
+                )}
+
+                {process.env.NODE_ENV === 'production' && (
+                    <script
+                        async
+                        src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1319295110910312'
+                        crossorigin='anonymous'
+                    ></script>
+                )}
+            </head>
             <body className={inter.className}>
                 <AuthProvider>
                     <ThemeContextProvider>

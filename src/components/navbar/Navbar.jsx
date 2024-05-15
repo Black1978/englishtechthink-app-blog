@@ -32,7 +32,7 @@ const Navbar = () => {
                     priority={true}
                 />
             </Link>
-            <div className={styles.links}>
+            <nav className={styles.links}>
                 <ThemeToggle />
                 <Link href='/' className={styles.link}>
                     Home
@@ -44,7 +44,7 @@ const Navbar = () => {
                     About
                 </Link>
                 <AuthLinks />
-            </div>
+            </nav>
         </div>
     )
 }

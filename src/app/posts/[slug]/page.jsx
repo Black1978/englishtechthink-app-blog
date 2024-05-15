@@ -15,6 +15,21 @@ const getData = async (slug) => {
     return res.json()
 }
 
+export async function generateMetadata({ params }) {
+    const { slug } = params
+    const post = await getData(slug)
+    return {
+        title: post?.title,
+        description: post?.descript?.substring(0, 155),
+        alternates: {
+            canonical: `/posts/${slug}`,
+            // languages: {
+            //     'en-CA': `en-CA/posts/${slug}`,
+            // },
+        },
+    }
+}
+
 const SinglePage = async ({ params }) => {
     const { slug } = params
 
@@ -26,19 +41,6 @@ const SinglePage = async ({ params }) => {
                 <div className={styles.textContainer}>
                     <h1 className={styles.title}>{data?.title}</h1>
                     <div className={styles.user}>
-                        {/* {data?.user?.image && (
-                            <div className={styles.userImageContainer}>
-                                <Image
-                                    src={data.user.image}
-                                    alt=''
-                                    fill
-                                    className={styles.avatar}
-                                />
-                            </div>
-                        )}
-                        <div className={styles.userTextContainer}>
-                            <span className={styles.username}>{data?.user?.name}</span>
-                        </div> */}
                         <span className={styles.date}>{data?.createdAt.substring(0, 10)}</span>
                     </div>
                 </div>
@@ -46,9 +48,9 @@ const SinglePage = async ({ params }) => {
                     <div className={styles.imageContainer}>
                         <Image
                             src={data.img}
-                            alt=''
+                            alt={data?.title}
                             fill
-                            sizes='(max-width: 500px) 0vw, 50vw'
+                            sizes='(max-width: 500px) 1vw, 50vw'
                             priority={true}
                             className={styles.image}
                         />
@@ -56,15 +58,15 @@ const SinglePage = async ({ params }) => {
                 )}
             </div>
             <div className={styles.content}>
-                <div className={styles.post}>
-                    <main
+                <article className={styles.post}>
+                    <div
                         className={'description'}
                         dangerouslySetInnerHTML={{ __html: data?.desc }}
                     />
-                    <div className={styles.comment}>
+                    <aside className={styles.comment}>
                         <Comments postSlug={slug} />
-                    </div>
-                </div>
+                    </aside>
+                </article>
                 <Menu />
             </div>
         </div>

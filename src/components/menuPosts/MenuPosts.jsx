@@ -21,6 +21,7 @@ const MenuPosts = async () => {
     const spellings = await getData('spelling')
     const speakings = await getData('speaking')
     const etc = await getData('etc')
+    
 
     return (
         <div className={styles.items}>
@@ -28,7 +29,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={understandings[0].img}
-                        alt=''
+                        alt={understandings[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}
@@ -50,7 +51,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={readings[0].img}
-                        alt=''
+                        alt={readings[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}
@@ -70,7 +71,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={listenings[0].img}
-                        alt=''
+                        alt={listenings[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}
@@ -90,7 +91,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={spellings[0].img}
-                        alt=''
+                        alt={spellings[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}
@@ -110,7 +111,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={speakings[0].img}
-                        alt=''
+                        alt={speakings[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}
@@ -130,7 +131,7 @@ const MenuPosts = async () => {
                 <div className={styles.imageContainer}>
                     <Image
                         src={etc[0].img}
-                        alt=''
+                        alt={etc[0].title}
                         fill
                         sizes='(max-width: 1024px) 0vw, 10vw'
                         className={styles.image}

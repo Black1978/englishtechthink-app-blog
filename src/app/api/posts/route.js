@@ -53,3 +53,4 @@ export const POST = async (req) => {
         )
     }
 }
+//GET ALL POSTS
