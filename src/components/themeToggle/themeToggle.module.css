@@ -13,5 +13,11 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    position: absolute;   
+    position: absolute;
+}
+@media screen and (max-width: 640px) {
+    .container {
+        width: 50px;
+    }
+   
 }

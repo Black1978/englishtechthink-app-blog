@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Footer = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.info}>
+            <nav className={styles.info}>
                 <Link href='/'>
                     <div className={styles.logo}>
                         <Image
@@ -20,19 +20,19 @@ const Footer = () => {
                 <p className={styles.desc}>Методика изучения английского языка.</p>
                 <nav className={styles.icons}>
                     <Link href='https://facebook.com'>
-                        <Image src='/facebook.png' alt='facebook' width={24} height={24} />
+                        <Image src='/facebook.png' alt='facebook' width={30} height={30} />
                     </Link>
                     <Link href='https://instagram.com'>
-                        <Image src='/instagram.png' alt='instagram' width={24} height={24} />
+                        <Image src='/instagram.png' alt='instagram' width={30} height={30} />
                     </Link>
                     <Link href='https://tiktok.com'>
-                        <Image src='/tiktok.png' alt='tiktok' width={24} height={24} />
+                        <Image src='/tiktok.png' alt='tiktok' width={30} height={30} />
                     </Link>
                     <Link href='https://youtube.com'>
-                        <Image src='/youtube.png' alt='youtube' width={24} height={24} />
+                        <Image src='/youtube.png' alt='youtube' width={30} height={30} />
                     </Link>
                 </nav>
-            </div>
+            </nav>
             <div className={styles.links}>
                 <nav className={styles.list}>
                     <span className={styles.listTitle}>Ссылки</span>

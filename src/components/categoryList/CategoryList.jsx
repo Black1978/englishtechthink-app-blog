@@ -19,7 +19,7 @@ const CategoryList = async () => {
     const data = await getData()
 
     return (
-        <div className={styles.container}>
+        <nav className={styles.container}>
             <h2 className={styles.title}>Темы</h2>
             <div className={styles.categories}>
                 {data?.map((item) => (
@@ -41,7 +41,7 @@ const CategoryList = async () => {
                     </Link>
                 ))}
             </div>
-        </div>
+        </nav>
     )
 }
 

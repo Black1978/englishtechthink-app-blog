@@ -14,14 +14,14 @@ const Pagination = ({ page, hasPrev, hasNext, cat }) => {
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}&cat=${cat || ""}`)}
       >
-        Previous
+        предыдущая
       </button>
       <button
         disabled={!hasNext}
         className={styles.button}
         onClick={() => router.push(`?page=${page + 1}&cat=${cat || ""}`)}
       >
-        Next
+        следующая
       </button>
     </div>
   );

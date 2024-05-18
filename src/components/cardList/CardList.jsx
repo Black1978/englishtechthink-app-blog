@@ -28,7 +28,7 @@ const CardList = async ({ page, cat }) => {
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <h2 className={styles.title}>Последние публикации</h2>
       <div className={styles.posts}>
         {posts?.map((item) => (
@@ -36,7 +36,7 @@ const CardList = async ({ page, cat }) => {
         ))}
       </div>
       <Pagination page={page} cat={cat} hasPrev={hasPrev} hasNext={hasNext} />
-    </div>
+    </nav>
   );
 };
 

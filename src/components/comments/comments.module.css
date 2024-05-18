@@ -4,6 +4,7 @@
 .title {
     color: var(--softTextColor);
     margin-bottom: 30px;
+    font-size: 1.5rem;
 }
 .write {
     display: flex;
@@ -56,4 +57,19 @@
 }
 .comment {
     margin-top: 50px;
+}
+.link {
+    position: relative;
+}
+.linkBorder {
+    background: crimson;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+}
+@media screen and (max-width: 768px) {
+    .write {
+        flex-direction: column;
+    }
 }

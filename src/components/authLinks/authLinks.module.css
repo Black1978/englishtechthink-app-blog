@@ -2,7 +2,7 @@
     cursor: pointer;
 }
 .burger {
-    width: 20px;
+    width: 24px;
     height: 16px;
     display: none;
     flex-direction: column;

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Featured = () => {
     return (
-        <div className={styles.container}>
+        <article className={styles.container}>
             <h1 className={styles.title}>Научись думать на английском языке</h1>
             <div className={styles.post}>
                 <div className={styles.imgContainer}>
@@ -18,7 +18,7 @@ const Featured = () => {
                         priority
                     />
                 </div>
-                <div className={styles.textContainer}>
+                <section className={styles.textContainer}>
                     <h2 className={styles.postTitle}>Не «переводить как…», а «понимать»</h2>
                     <p className={styles.postDesc}>
                         Английский язык изучается не как «аналог» русского языка, а как «устройство»
@@ -27,11 +27,11 @@ const Featured = () => {
                         «паразитирования» изучаемого английского языка на русском языке.
                     </p>
                     <Link href={`/posts/ne-perevodit-kak-a-ponimat`} className={styles.link}>
-                        <button className={styles.button}>Read More</button>{' '}
+                        <button className={styles.button}>Читать</button>{' '}
                     </Link>
-                </div>
+                </section>
             </div>
-        </div>
+        </article>
     )
 }
 

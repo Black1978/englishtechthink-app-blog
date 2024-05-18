@@ -14,7 +14,7 @@ const ThemeToggle = () => {
               ? { backgroundColor: 'white' }
               : { backgroundColor: '#0f172a' }
       } onClick={() => toggle()}>
-            <Image src='/moon.png' width={14} height={14} alt='' />
+            <Image src='/moon.png' width={16} height={16} alt='' />
             <div
                 className={styles.ball}
                 style={

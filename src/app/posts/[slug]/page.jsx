@@ -36,13 +36,13 @@ const SinglePage = async ({ params }) => {
     const data = await getData(slug)
 
     return (
-        <div className={styles.container}>
+        <article className={styles.container}>
             <div className={styles.infoContainer}>
                 <div className={styles.textContainer}>
                     <h1 className={styles.title}>{data?.title}</h1>
-                    <div className={styles.user}>
+                    <footer className={styles.user}>
                         <span className={styles.date}>{data?.createdAt.substring(0, 10)}</span>
-                    </div>
+                    </footer>
                 </div>
                 {data?.img && (
                     <div className={styles.imageContainer}>
@@ -58,7 +58,7 @@ const SinglePage = async ({ params }) => {
                 )}
             </div>
             <div className={styles.content}>
-                <article className={styles.post}>
+                <div className={styles.post}>
                     <div
                         className={'description'}
                         dangerouslySetInnerHTML={{ __html: data?.desc }}
@@ -66,10 +66,10 @@ const SinglePage = async ({ params }) => {
                     <aside className={styles.comment}>
                         <Comments postSlug={slug} />
                     </aside>
-                </article>
-                <Menu />
+                </div>
+                    <Menu />
             </div>
-        </div>
+        </article>
     )
 }
 

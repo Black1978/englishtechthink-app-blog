@@ -20,6 +20,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 14px;
 }
 .links {
@@ -31,7 +32,7 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     font-weight: 300;
 }
 .desc {
@@ -39,8 +40,8 @@
 }
 .icons {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 15px;
 }
 .listTitle {
     font-weight: bold;
@@ -63,9 +64,18 @@
         justify-content: space-between;
         width: 100%;
     }
+    .list {
+        gap: 20px;
+    }
 }
 @media screen and (max-width: 640px) {
     .links {
         font-size: 14px;
+    }
+    .list:last-child {
+        display: none;
+    }
+    .logo {
+        width: 240px;
     }
 }

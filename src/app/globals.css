@@ -218,6 +218,10 @@ img {
 
 /*-------------The end of the reset-------------*/
 
+/* * {
+    outline: 4px solid red!important;
+} */
+
 :root {
     --bg: white;
     --textColor: black;

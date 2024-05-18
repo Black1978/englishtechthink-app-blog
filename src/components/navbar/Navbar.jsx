@@ -8,19 +8,19 @@ import AuthLinks from '../authLinks/AuthLinks'
 
 const Navbar = () => {
     return (
-        <div className={styles.container}>
+        <nav className={styles.container}>
             <div className={styles.social}>
                 <Link href='http://facebook.com'>
-                    <Image src='/facebook.png' alt='facebook' width={30} height={30} />
+                    <Image src='/facebook.png' alt='facebook' width={24} height={24} />
                 </Link>
                 <Link href='http://instagram.com'>
-                    <Image src='/instagram.png' alt='instagram' width={30} height={30} />
+                    <Image src='/instagram.png' alt='instagram' width={24} height={24} />
                 </Link>
                 <Link href='http://tiktok.com'>
-                    <Image src='/tiktok.png' alt='tiktok' width={30} height={30} />
+                    <Image src='/tiktok.png' alt='tiktok' width={24} height={24} />
                 </Link>
                 <Link href='http://youtube.com'>
-                    <Image src='/youtube.png' alt='youtube' width={30} height={30} />
+                    <Image src='/youtube.png' alt='youtube' width={24} height={24} />
                 </Link>
             </div>
             <Link href='/' className={styles.logo}>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     priority={true}
                 />
             </Link>
-            <nav className={styles.links}>
+            <div className={styles.links}>
                 <ThemeToggle />
                 <Link href='/' className={styles.link}>
                     Home
@@ -44,8 +44,8 @@ const Navbar = () => {
                     About
                 </Link>
                 <AuthLinks />
-            </nav>
-        </div>
+            </div>
+        </nav>
     )
 }
 
